@@ -104,7 +104,7 @@ function ProductMockup({ desktop = false }: { desktop?: boolean }) {
             <div className="relative p-5 sm:p-6">
               <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-2xl">
                 <img
-                  src="/livro.png"
+                  src="/livro.webp"
                   alt="Guia da Caneta - Capa do livro digital"
                   className="w-full h-full object-cover"
                   loading="eager"
