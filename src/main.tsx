@@ -47,6 +47,7 @@ window.fbq?.('init', '4357377857865491')
 window.fbq?.('track', 'PageView')
 // UTMFY
 if (typeof window !== 'undefined') {
+  // @ts-ignore
   window.pixelId = "6a14c7ae54e0ce0246c0f66f";
   const utmScript = document.createElement("script");
   utmScript.setAttribute("async", "");
