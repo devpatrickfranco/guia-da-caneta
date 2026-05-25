@@ -3,23 +3,26 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 
-/* META PIXEL */
 declare global {
   interface Window {
-    fbq: any
+    fbq: (...args: any[]) => void
+    _fbq: any
   }
 }
 
-!(function (f: any, b, e, v, n?: any, t?: any, s?: any) {
+(function (f, b, e, v, n?: any, t?: any, s?: any) {
   if (f.fbq) return
 
-  n = f.fbq = function () {
-    n.callMethod
-      ? n.callMethod.apply(n, arguments)
-      : n.queue.push(arguments)
+  n = function (...args: any[]) {
+    if (n.callMethod) {
+      n.callMethod(...args)
+    } else {
+      n.queue.push(args)
+    }
   }
 
-  if (!f._fbq) f._fbq = n
+  f.fbq = n
+  f._fbq = n
 
   n.push = n
   n.loaded = true
@@ -31,7 +34,7 @@ declare global {
   t.src = v
 
   s = b.getElementsByTagName(e)[0]
-  s.parentNode.insertBefore(t, s)
+  s.parentNode?.insertBefore(t, s)
 })(
   window,
   document,
