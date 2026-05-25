@@ -187,8 +187,8 @@ export function HeroSection() {
 
               <Reveal direction="up" delay={0.2}>
                 <h1 className="text-[clamp(28px,3.5vw,56px)] font-black leading-none tracking-[-0.03em]">
-                  Tudo o que você precisa saber{' '}
-                  <span className="text-gradient">antes de começar</span> a usar
+                  Tudo o que você precisa saber para{' '}
+                  <span className="text-gradient">potencializar seus resultados e proteger seu corpo</span> com
                   a caneta de emagrecimento
                 </h1>
               </Reveal>
