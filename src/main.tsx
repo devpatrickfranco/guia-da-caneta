@@ -5,12 +5,12 @@ import App from './App.tsx'
 
 declare global {
   interface Window {
-    fbq: (...args: any[]) => void
-    _fbq: any
+    fbq?: (...args: any[]) => void
+    _fbq?: any
   }
 }
 
-(function (f, b, e, v, n?: any, t?: any, s?: any) {
+;(function (f, b, e, v, n?: any, t?: any, s?: any) {
   if (f.fbq) return
 
   n = function (...args: any[]) {
@@ -42,8 +42,8 @@ declare global {
   'https://connect.facebook.net/en_US/fbevents.js'
 )
 
-window.fbq('init', '4357377857865491')
-window.fbq('track', 'PageView')
+window.fbq?.('init', '4357377857865491')
+window.fbq?.('track', 'PageView')
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
