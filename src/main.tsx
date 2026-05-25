@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 
+//META
 declare global {
   interface Window {
     fbq?: (...args: any[]) => void
@@ -44,6 +45,15 @@ declare global {
 
 window.fbq?.('init', '4357377857865491')
 window.fbq?.('track', 'PageView')
+// UTMFY
+if (typeof window !== 'undefined') {
+  window.pixelId = "6a14c7ae54e0ce0246c0f66f";
+  const utmScript = document.createElement("script");
+  utmScript.setAttribute("async", "");
+  utmScript.setAttribute("defer", "");
+  utmScript.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(utmScript);
+}
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
