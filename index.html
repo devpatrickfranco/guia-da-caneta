@@ -38,6 +38,49 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+  <!-- Meta Pixel -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function (...args) {
+          n.callMethod ? n.callMethod(...args) : n.queue.push(args);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "4357377857865491");
+      fbq("track", "PageView");
+    </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display:none"
+        src="https://www.facebook.com/tr?id=4357377857865491&ev=PageView&noscript=1"
+        alt=""
+      >
+    </noscript>
+
+    <!-- UTMfy -->
+    <script>
+      (function () {
+        if (typeof window === "undefined") return;
+        window.pixelId = "6a14c7ae54e0ce0246c0f66f";
+        var s = document.createElement("script");
+        s.async = true;
+        s.defer = true;
+        s.src = "https://cdn.utmify.com.br/scripts/pixel/pixel.js";
+        document.head.appendChild(s);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

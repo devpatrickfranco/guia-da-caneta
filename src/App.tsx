@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { HeroSection } from './sections/HeroSection';
 import { IdentificationSection } from './sections/IdentificationSection';
 import { AprenderSection } from './sections/AprenderSection';
@@ -9,14 +10,14 @@ import { FaqSection } from './sections/FaqSection';
 import { GarantiaSection } from './sections/GarantiaSection';
 import { FinalCtaSection } from './sections/FinalCtaSection';
 import { FooterSection } from './sections/FooterSection';
+import PlanoAlimentar100 from './pages/upsell';
 
-function App() {
+function HomePage() {
   useEffect(() => {
-
     const linkCheckout = 'https://pay.kiwify.com.br/6hK1S0P';
 
     let urlBackRedirect = linkCheckout;
-    
+
     // Pega as UTMs da Utmfy/Meta da URL da LP e arrasta para o checkout
     urlBackRedirect = urlBackRedirect.trim() +
       (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
@@ -53,6 +54,15 @@ function App() {
       <FinalCtaSection />
       <FooterSection />
     </main>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/planoalimentar100" element={<PlanoAlimentar100 />} />
+    </Routes>
   );
 }
 
