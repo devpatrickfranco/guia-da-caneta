@@ -9,7 +9,6 @@ import { StickyCtaMobile } from '../components/landing/StickyCtaMobile';
 function ProductMockup({ desktop = false }: { desktop?: boolean }) {
   return (
     <div className="relative flex items-center justify-center w-full">
-      {/* Radial glow behind product */}
       <div
         className="absolute inset-0 flex items-center justify-center pointer-events-none"
         style={{ transform: 'translateY(-10px)' }}
@@ -23,22 +22,21 @@ function ProductMockup({ desktop = false }: { desktop?: boolean }) {
         />
       </div>
 
-      {/* Value perception badges */}
       <div className="absolute -top-2 right-4 sm:right-8 z-20">
         <div className="bg-surface/80 backdrop-blur-md border border-primary/20 rounded-xl px-3.5 py-2 text-xs font-semibold text-accent shadow-lg">
-          25 páginas práticas
+          Edição 2026
         </div>
       </div>
 
       <div className="absolute top-1/4 -left-2 sm:-left-4 z-20">
         <div className="bg-surface/80 backdrop-blur-md border border-border/80 rounded-xl px-3 py-1.5 text-[11px] font-semibold text-muted-foreground shadow-lg">
-          10 capítulos
+          Módulos 1 a 6
         </div>
       </div>
 
       <div className="absolute bottom-[18%] -right-1 z-20">
         <div className="bg-surface/80 backdrop-blur-md border border-border/80 rounded-xl px-3 py-1.5 text-[11px] font-semibold text-muted-foreground shadow-lg">
-          3 bônus inclusos
+          Consulta rápida
         </div>
       </div>
 
@@ -48,7 +46,6 @@ function ProductMockup({ desktop = false }: { desktop?: boolean }) {
         </div>
       </div>
 
-      {/* 3D Perspective container */}
       <motion.div
         className="relative z-10"
         initial={{ opacity: 0, y: 30, rotateX: 5, rotateY: -3 }}
@@ -72,7 +69,6 @@ function ProductMockup({ desktop = false }: { desktop?: boolean }) {
         }}
         style={{ perspective: '1200px' }}
       >
-        {/* Premium card container */}
         <div
           className="relative w-[300px] sm:w-[360px] rounded-3xl overflow-hidden"
           style={{
@@ -84,12 +80,9 @@ function ProductMockup({ desktop = false }: { desktop?: boolean }) {
             `,
           }}
         >
-          {/* Orange accent top border */}
           <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-primary/60 via-primary to-accent z-30" />
 
-          {/* Glass card background */}
           <div className="relative bg-gradient-to-b from-[#1a1208] to-[#0f0b06] rounded-3xl">
-            {/* Subtle texture overlay */}
             <div
               className="absolute inset-0 opacity-[0.03] rounded-3xl pointer-events-none"
               style={{
@@ -97,38 +90,33 @@ function ProductMockup({ desktop = false }: { desktop?: boolean }) {
               }}
             />
 
-            {/* Inner glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,115,0,0.06) 0%, transparent 70%)' }} />
 
-            {/* Book image */}
             <div className="relative p-5 sm:p-6">
               <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-2xl">
                 <img
                   src="/livro.webp"
-                  alt="Guia da Caneta - Capa do livro digital"
+                  alt="Sistema Primeiras Semanas - Material prático para caneta de emagrecimento"
                   className="w-full h-full object-cover"
                   loading="eager"
                 />
 
-                {/* Subtle gradient overlay on image edges */}
                 <div className="absolute inset-0 pointer-events-none" style={{
                   background: 'linear-gradient(to bottom, rgba(0,0,0,0.02) 0%, transparent 20%, transparent 80%, rgba(0,0,0,0.06) 100%)'
                 }} />
 
-                {/* Edge light reflection */}
                 <div className="absolute top-0 left-0 right-0 h-[1px] bg-white/5 pointer-events-none" />
               </div>
             </div>
 
-            {/* Bottom label */}
             <div className="relative px-5 sm:px-6 pb-4 sm:pb-5">
               <div className="flex items-center justify-between border-t border-white/5 pt-3 sm:pt-4">
                 <div>
                   <span className="block text-[10px] tracking-[0.15em] uppercase text-muted-foreground/60 font-medium">
-                    Guia da Caneta
+                    Sistema Primeiras Semanas™
                   </span>
                   <span className="block text-[11px] text-accent font-semibold mt-0.5">
-                    Material Educativo
+                    Guia prático por fase
                   </span>
                 </div>
                 <div className="text-right">
@@ -145,7 +133,6 @@ function ProductMockup({ desktop = false }: { desktop?: boolean }) {
         </div>
       </motion.div>
 
-      {/* Abstract medical/biotech decoration line */}
       <svg
         className="absolute -bottom-4 right-0 w-24 h-24 opacity-[0.04] pointer-events-none"
         viewBox="0 0 100 100"
@@ -170,30 +157,26 @@ export function HeroSection() {
         id="hero"
         className="relative min-h-[90vh] flex items-center overflow-hidden pt-12 sm:pt-20 pb-16 sm:pb-24"
       >
-        {/* Background glow */}
         <div className="absolute top-[-20%] right-[-20%] w-[60%] h-[60%] glow-orange opacity-70 pointer-events-none" />
         <div className="absolute bottom-[-10%] left-[-10%] w-[40%] h-[40%] glow-orange opacity-30 pointer-events-none" />
 
         <Container className="relative z-10">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-            {/* Left column - Content */}
             <div className="flex flex-col gap-6 lg:gap-7">
               <Reveal direction="up" delay={0.1}>
                 <Badge variant="premium" className="text-xs">
                   <span className="text-primary">✦</span>
-                  Material Educativo
+                  Sistema prático para as primeiras semanas
                 </Badge>
               </Reveal>
 
               <Reveal direction="up" delay={0.2}>
-                <h1 className="text-[clamp(28px,3.5vw,56px)] font-black leading-none tracking-[-0.03em]">
-                  Tudo o que você precisa saber para{' '}
-                  <span className="text-gradient">potencializar seus resultados e proteger seu corpo</span> com
-                  a caneta de emagrecimento
+                <h1 className="text-[clamp(30px,4vw,62px)] font-black leading-none tracking-[-0.03em]">
+                  Começou a caneta e não sabe{' '}
+                  <span className="text-gradient">exatamente o que fazer</span> nos primeiros dias?
                 </h1>
               </Reveal>
 
-              {/* Mobile product mockup — between headline/subheadline and CTA */}
               <div className="block lg:hidden my-2">
                 <Reveal direction="up" delay={0.25}>
                   <ProductMockup />
@@ -202,9 +185,10 @@ export function HeroSection() {
 
               <Reveal direction="up" delay={0.3}>
                 <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-xl">
-                  Entenda Ozempic, Mounjaro, Wegovy e similares — sem linguagem
-                  médica complicada, sem enrolação e sem cometer erros que podem
-                  custar caro no seu tratamento.
+                  Um acompanhamento simples, organizado por fase, para você saber
+                  o que é normal sentir, o que comer, quando se preocupar e como
+                  proteger músculo, cabelo e energia usando Ozempic, Mounjaro,
+                  Wegovy ou similares.
                 </p>
               </Reveal>
 
@@ -216,7 +200,7 @@ export function HeroSection() {
                 </div>
                 <p className="text-sm text-muted-foreground">
                   {SITE_CONFIG.priceParcelado} · Acesso imediato ·
-                  Material educativo · Leitura simples
+                  Módulos 1 a 6 · Painel de consulta rápida
                 </p>
               </Reveal>
 
@@ -235,13 +219,12 @@ export function HeroSection() {
               </Reveal>
             </div>
 
-            {/* Right column - Premium product showcase (desktop only) */}
             <div className="hidden lg:flex justify-center items-center">
               <Reveal direction="right" delay={0.3}>
                 <ProductMockup desktop />
               </Reveal>
             </div>
-            </div>
+          </div>
         </Container>
       </section>
 

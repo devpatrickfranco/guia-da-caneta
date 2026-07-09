@@ -4,19 +4,18 @@ import { SectionTitle } from '../components/ui/SectionTitle';
 import { StaggerContainer, StaggerItem } from '../components/ui/Reveal';
 import { IDENTIFICATION_PAINS } from '../constants';
 
-const painIcons = ['😰', '🤔', '🤢', '💸', '🔄', '❓'];
+const painIcons = ['🧾', '😰', '🥗', '💸', '💉', '📌'];
 
 export function IdentificationSection() {
   return (
     <section id="identification" className="py-16 sm:py-24 relative">
-      {/* Background */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[60%] glow-orange opacity-[0.08] pointer-events-none" />
 
       <Container>
         <SectionTitle
-          tag="identificação"
-          title="Todo mundo fala da caneta. Pouca gente explica de verdade."
-          description="Se você está pensando em começar, provavelmente já sentiu algumas dessas preocupações."
+          tag="primeiras semanas"
+          title="A receita vem com o remédio. Mas quase nunca vem com um manual."
+          description="É exatamente nesse vazio — entre a consulta e a rotina em casa — que a maioria das dúvidas aparece."
         />
 
         <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
