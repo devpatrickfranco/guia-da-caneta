@@ -1,10 +1,10 @@
 export const SITE_CONFIG = {
-  name: 'Guia da Caneta',
+  name: 'Sistema Primeiras Semanas™',
   description:
-    'Tudo o que você precisa saber antes de começar a usar a caneta de emagrecimento — Ozempic, Mounjaro, Wegovy e similares.',
-  url: 'https://guiadacaneta.com.br',
-  ctaPrimary: 'Quero Acessar Agora',
-  ctaFinal: 'Quero Acessar o Guia da Caneta',
+    'O acompanhamento prático para quem começou ou está prestes a começar a caneta de emagrecimento — Ozempic, Mounjaro, Wegovy e similares.',
+  url: 'https://guiadacaneta.ellevo.marketing',
+  ctaPrimary: 'Quero meu sistema agora',
+  ctaFinal: 'Quero começar com segurança',
   priceFull: 'R$197',
   priceCurrent: 'R$27,00',
   priceParcelado: '6x de R$ 5,07',
@@ -13,43 +13,43 @@ export const SITE_CONFIG = {
 };
 
 export const HERO_BENEFITS = [
-  'Entenda como GLP-1 funciona',
-  'Ozempic, Mounjaro ou Wegovy? Entenda a diferença',
-  'O que esperar nos primeiros 3 meses',
-  'Como comer certo desde o primeiro dia',
-  'Como evitar perda muscular e queda de cabelo',
+  'Organizado por fase: dia 1, primeiras semanas e primeiro mês',
+  'O que é normal sentir — e quando falar com o médico',
+  'Rotina alimentar simples para comer mesmo sem fome',
+  'Como proteger músculo, cabelo e energia durante o tratamento',
+  'Painel de consulta rápida para imprimir ou salvar no celular',
 ];
 
 export const IDENTIFICATION_PAINS = [
   {
-    title: 'Medo de começar errado',
+    title: 'Saí da consulta, e agora?',
     description:
-      'Sem informação de qualidade, você pode iniciar o tratamento com expectativas erradas e tomar decisões que comprometem seus resultados.',
+      'Você recebeu a receita, comprou a caneta ou está prestes a começar, mas ainda não sabe exatamente o que fazer amanhã de manhã.',
   },
   {
-    title: 'Insegurança sobre qual medicamento escolher',
+    title: 'Medo de passar mal',
     description:
-      'Ozempic, Mounjaro, Wegovy — cada um tem indicações, efeitos e custos diferentes. Escolher errado pode custar caro.',
+      'Enjoo, cansaço, constipação e falta de apetite assustam quando ninguém explicou o que é esperado nas primeiras semanas.',
   },
   {
-    title: 'Medo de passar mal ou ter efeitos colaterais',
+    title: 'Não saber o que comer',
     description:
-      'Náusea, fadiga, desconforto digestivo. Saber o que esperar e como prevenir muda completamente sua experiência.',
+      'A fome diminui, mas seu corpo ainda precisa de proteína, água e rotina para não perder músculo, cabelo e energia.',
   },
   {
-    title: 'Medo de gastar dinheiro à toa',
+    title: 'Medo de desperdiçar dinheiro',
     description:
-      'Tratamento com GLP-1 é investimento alto. Sem planejamento, você pode gastar muito mais do que precisa.',
+      'O tratamento custa caro. Começar sem organização aumenta o risco de abandonar, usar errado ou não aproveitar o investimento.',
   },
   {
-    title: 'Medo do efeito rebote',
+    title: 'Insegurança antes da próxima dose',
     description:
-      'Grande parte das pessoas que recuperam o peso é porque não foram preparadas para o que vem depois. Isso se evita com informação.',
+      'A dúvida aparece antes de aplicar: será que estou comendo certo, bebendo água suficiente e fazendo o que deveria?',
   },
   {
-    title: 'Não saber o que esperar',
+    title: 'Falta de um manual simples',
     description:
-      'Cada mês do tratamento é diferente. Saber antecipadamente o que acontece reduz ansiedade e aumenta adesão.',
+      'A maioria das pessoas recebe orientação médica, mas não recebe um passo a passo prático para viver os primeiros dias em casa.',
   },
 ];
 
@@ -57,113 +57,113 @@ export const CHAPTERS = [
   {
     number: 1,
     icon: '🧬',
-    title: 'Como GLP-1 funciona no seu corpo',
-    description: 'Entenda o mecanismo de ação de forma simples e direta.',
+    title: 'Estado inicial: entenda o que está começando',
+    description: 'O mecanismo da caneta explicado de forma simples, sem linguagem médica complicada.',
   },
   {
     number: 2,
-    icon: '⚖️',
-    title: 'Ozempic vs Mounjaro vs Wegovy',
-    description: 'Diferenças, indicações e qual pode ser melhor para você.',
+    icon: '💉',
+    title: 'Ozempic, Mounjaro, Wegovy e similares',
+    description: 'Por que cada medicamento existe e por que a prescrição deve ser individual.',
   },
   {
     number: 3,
-    icon: '🩺',
-    title: 'Quem pode usar — e quem não deve',
-    description: 'Critérios de indicação, contraindicações e sinais de alerta.',
+    icon: '🤢',
+    title: 'Primeiros 14 dias: o que é normal sentir',
+    description: 'Enjoo, saciedade, cansaço, falta de apetite e sinais de alerta para falar com o médico.',
   },
   {
     number: 4,
-    icon: '📋',
-    title: 'Como conseguir prescrição médica',
-    description: 'O passo a passo para obter acompanhamento adequado.',
+    icon: '🥗',
+    title: 'Como comer sem perder músculo',
+    description: 'A regra da proteína primeiro e exemplos práticos para quem sente pouca fome.',
   },
   {
     number: 5,
-    icon: '💰',
-    title: 'Como economizar no tratamento',
-    description: 'Estratégias práticas para reduzir custos sem comprometer a qualidade.',
+    icon: '⚠️',
+    title: 'Os erros que travam o resultado',
+    description: 'Os deslizes mais comuns nas primeiras semanas e como evitar perda de tempo e dinheiro.',
   },
   {
     number: 6,
-    icon: '📅',
-    title: 'O que esperar nos primeiros meses',
-    description: 'Mês a mês: o que acontece no corpo, efeitos colaterais e adaptações.',
+    icon: '💪',
+    title: 'Protegendo cabelo e músculos',
+    description: 'Estratégias simples para reduzir flacidez, fraqueza, queda capilar e efeito rebote.',
   },
   {
     number: 7,
-    icon: '🥗',
-    title: 'Alimentação correta desde o primeiro dia',
-    description: 'O que comer e o que evitar para potencializar resultados.',
+    icon: '📅',
+    title: 'Rotina pronta para 7 dias',
+    description: 'Um modelo alimentar semanal para seguir sem precisar decidir tudo sozinha.',
   },
   {
     number: 8,
-    icon: '⚠️',
-    title: 'Os erros que travam resultados',
-    description: 'Equívocos comuns que sabotam o tratamento — e como evitá-los.',
+    icon: '🛒',
+    title: 'Lista de compras da semana',
+    description: 'Proteínas, vegetais, carboidratos de qualidade, frutas e itens úteis para a rotina.',
   },
   {
     number: 9,
-    icon: '💪',
-    title: 'Como proteger músculo e cabelo',
-    description: 'Estratégias nutricionais para evitar perda muscular e queda capilar.',
+    icon: '🍳',
+    title: 'Receitas para quem come pouco',
+    description: 'Ideias rápidas, proteicas e fáceis para dias de pouca fome ou enjoo.',
   },
   {
     number: 10,
-    icon: '📋',
-    title: 'Rotina prática pronta para seguir',
-    description: 'Um plano de ação simples para o dia a dia.',
+    icon: '📌',
+    title: 'Painel de consulta rápida',
+    description: 'Tabela de proteínas por porção e sinais de alerta para consultar quando precisar.',
   },
 ];
 
 export const ERROS = [
   {
-    title: 'Gastar dinheiro no medicamento errado',
+    title: 'Parar de comer porque perdeu a fome',
     description:
-      'Nem todo GLP-1 é igual. Pagar mais caro por um que não se adequa ao seu perfil é o erro mais comum e mais caro.',
+      'A balança pode até cair rápido, mas o preço pode ser perda muscular, fraqueza, queda de cabelo e efeito rebote.',
   },
   {
-    title: 'Aumentar dose cedo demais',
+    title: 'Aumentar dose antes da hora',
     description:
-      'Pressa para ver resultados leva a efeitos colaterais intensos e abandono precoce do tratamento.',
+      'Mais dose não significa mais resultado. Muitas vezes significa mais enjoo, mais desconforto e maior chance de abandonar.',
   },
   {
-    title: 'Perder massa muscular',
+    title: 'Não bater proteína mínima',
     description:
-      'Emagrecer sem preservar músculo compromete o metabolismo e aumenta o risco de recuperar o peso.',
+      'Proteína é o que ajuda a proteger músculo, cabelo, imunidade e firmeza enquanto o peso baixa.',
   },
   {
-    title: 'Comer errado durante o tratamento',
+    title: 'Ignorar água e constipação',
     description:
-      'Alimentação inadequada potencializa efeitos colaterais e reduz a eficácia do medicamento.',
+      'A caneta pode reduzir sede e apetite. Sem hidratação, enjoo, prisão de ventre e mal-estar ficam mais prováveis.',
   },
   {
-    title: 'Abandonar no primeiro enjoo',
+    title: 'Comparar sua dose com a de amigas',
     description:
-      'Desconforto inicial é normal e administrável. Desistir cedo significa jogar fora o investimento.',
+      'Cada prescrição considera histórico, exames e tolerância. Copiar dose ou trocar remédio por conta própria é risco real.',
   },
   {
-    title: 'Criar expectativas irreais',
+    title: 'Não saber quando pedir ajuda',
     description:
-      'Achar que a caneta faz tudo sozinha leva à frustração. Resultado sustentável exige preparo e informação.',
+      'Enjoo intenso, dor abdominal forte, constipação severa ou sintomas fora do padrão precisam de orientação médica.',
   },
 ];
 
 export const BONUS = [
   {
-    title: 'Lista de compras semanal',
+    title: 'Rotina de 7 dias para seguir',
     description:
-      'Um guia prático com os alimentos certos para cada fase do tratamento — organizado por semana.',
+      'Um modelo simples de refeições para as primeiras semanas, pensado para quem está com pouco apetite.',
   },
   {
-    title: 'Tabela de proteínas por porção',
+    title: 'Lista de compras pronta',
     description:
-      'Referência rápida para garantir a ingestão ideal de proteínas e proteger sua massa muscular.',
+      'Uma lista objetiva para montar a semana sem ficar perdida no mercado ou comprando itens aleatórios.',
   },
   {
-    title: '10 receitas proteicas para quem come pouco',
+    title: 'Painel de consulta rápida',
     description:
-      'Receitas práticas, rápidas e ricas em proteína, pensadas para quem sente saciedade precoce.',
+      'Tabela de proteínas por porção + sinais de alerta para consultar antes da próxima aplicação.',
   },
 ];
 
@@ -176,39 +176,39 @@ export const TESTIMONIALS: {
   {
     avatar: '/avatars/avatar1.jpg',
     name: 'Ana Clara S.',
-    text: 'O guia me deu segurança para começar o tratamento. Saber exatamente o que esperar em cada mês fez toda a diferença.',
+    text: 'Eu tinha saído da consulta com a receita, mas cheia de dúvidas. O sistema me mostrou o que olhar nos primeiros dias.',
     rating: 5,
   },
   {
     avatar: '/avatars/avatar2.jpg',
     name: 'Rafaela M.',
-    text: 'Comprei o guia antes de iniciar a caneta e foi a melhor decisão. Evitei erros que minhas amigas cometeram.',
+    text: 'A parte da proteína foi o que mais abriu minha cabeça. Eu estava comendo pouco demais achando que estava fazendo certo.',
     rating: 5,
   },
   {
     avatar: '/avatars/avatar3.jpg',
     name: 'Camila R.',
-    text: 'A parte de alimentação salvou meu tratamento. Perdi peso mantendo massa muscular — algo que eu não sabia que era possível.',
+    text: 'Gostei porque não é aula gigante. É direto: o que é normal, o que fazer hoje e quando falar com o médico.',
     rating: 5,
   },
   {
     avatar: '/avatars/avatar4.jpg',
     name: 'Juliana T.',
-    text: 'Claro, direto e sem enrolação. Exatamente o que eu precisava para tomar uma decisão informada.',
+    text: 'Salvei o painel no celular e consulto antes da aplicação. Me deixou muito mais segura nas primeiras semanas.',
     rating: 5,
   },
 ];
 
 export const FAQ = [
   {
-    question: 'Serve para iniciantes?',
+    question: 'Serve para quem já começou a caneta?',
     answer:
-      'Sim. O guia foi feito especialmente para quem está considerando começar e quer tomar uma decisão informada. Você não precisa ter nenhum conhecimento prévio sobre GLP-1 ou canetas de emagrecimento.',
+      'Sim. O Sistema Primeiras Semanas™ foi feito principalmente para quem começou agora, está nas primeiras doses ou acabou de sair da consulta com a receita e quer saber como se organizar.',
   },
   {
-    question: 'Preciso já estar tomando a caneta?',
+    question: 'Serve para Ozempic, Mounjaro, Wegovy e similares?',
     answer:
-      'Não. O guia é ideal tanto para quem está pensando em começar quanto para quem já começou e quer se sentir mais seguro e preparado.',
+      'Sim. O material aborda GLP-1 e medicamentos similares de forma educativa, com foco em rotina, alimentação, sintomas esperados, proteção muscular e sinais de alerta.',
   },
   {
     question: 'Como recebo acesso?',
@@ -223,11 +223,11 @@ export const FAQ = [
   {
     question: 'Isso substitui consulta médica?',
     answer:
-      'Não. O guia tem caráter exclusivamente educativo. Todo tratamento com GLP-1 deve ser acompanhado por um médico prescritor. O guia serve para você chegar na consulta preparado e tomar melhores decisões.',
+      'Não. O sistema tem caráter exclusivamente educativo e informativo. Todo tratamento com GLP-1 deve ser acompanhado por um médico prescritor. O material serve para você chegar mais segura e organizada em cada consulta.',
   },
   {
-    question: 'Quanto tempo leva para ler?',
+    question: 'Quanto tempo leva para usar?',
     answer:
-      'A leitura completa leva cerca de 40 minutos. É dividido em capítulos objetivos que você pode consumir no seu ritmo.',
+      'Você não precisa ler tudo de uma vez. O material foi organizado por fase: vá direto ao módulo da sua situação atual ou consulte o painel rápido quando precisar.',
   },
 ];
