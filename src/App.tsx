@@ -8,7 +8,9 @@ import { FaqSection } from './sections/FaqSection';
 import { GarantiaSection } from './sections/GarantiaSection';
 import { FinalCtaSection } from './sections/FinalCtaSection';
 import { FooterSection } from './sections/FooterSection';
-import PlanoAlimentar100 from './pages/upsell';
+
+import { lazy, Suspense } from 'react';
+const PlanoAlimentar100 = lazy(() => import('./pages/upsell'));
 
 function HomePage() {
   return (
@@ -29,8 +31,15 @@ function HomePage() {
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/planoalimentar100" element={<PlanoAlimentar100 />} />
+      <Route path="/" element={<HomePage />} />      
+      <Route
+        path="/planoalimentar100" 
+        element={
+          <Suspense fallback={<div>Carregando...</div>}>
+          <PlanoAlimentar100 />
+          </Suspense>
+          }
+        />
     </Routes>
   );
 }
