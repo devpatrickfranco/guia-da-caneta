@@ -48,7 +48,6 @@ function HomePage() {
       <AprenderSection />
       <ErrosSection />
       <RecebeSection />
-      <ProvaSocialSection />
       <FaqSection />
       <GarantiaSection />
       <FinalCtaSection />
