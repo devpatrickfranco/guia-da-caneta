@@ -12,7 +12,7 @@ export function AprenderSection() {
       <Container>
         <SectionTitle
           tag="por dentro do sistema"
-          title="O que você encontra no Sistema Primeiras Semanas™"
+          title="Tudo que você precisa nos primeiros dias, organizado em módulos práticos"
           description="Não é um ebook para estudar. É um roteiro prático para consultar conforme você vive cada fase do tratamento."
         />
 
