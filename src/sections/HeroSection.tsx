@@ -78,7 +78,7 @@ function ProductMockup({ desktop = false }: { desktop?: boolean }) {
             <div
               className="pointer-events-none absolute inset-0 rounded-3xl opacity-[0.03]"
               style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%[...]
               }}
               aria-hidden="true"
             />
@@ -234,11 +234,10 @@ export function HeroSection() {
               </Badge>
 
               <h1 className="text-[clamp(30px,4vw,62px)] leading-none font-black tracking-[-0.03em]">
-                Começou a caneta e não sabe{' '}
+                Começou a usar a caneta e ainda está{' '}
                 <span className="text-gradient">
-                  exatamente o que fazer
-                </span>{' '}
-                nos primeiros dias?
+                  fazendo tudo no improviso?
+                </span>
               </h1>
 
               <div className="my-2 block lg:hidden">
@@ -253,10 +252,7 @@ export function HeroSection() {
                 />
               </div>
               <p className="max-w-xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-                Um acompanhamento simples, organizado por fase, para você saber
-                o que é normal sentir, o que comer, quando se preocupar e como
-                proteger músculo, cabelo e energia usando Ozempic, Mounjaro,
-                Wegovy ou similares.
+                Tenha um plano prático para organizar alimentação, compras, hidratação e rotina nas primeiras semanas — sem depender de informações espalhadas em vídeos e grupos.
               </p>
 
               <div>
