@@ -200,13 +200,21 @@ a:not([class]):hover {
   }
 }
 .hero-card {
-  opacity: 0;
-  animation: hero-card-in 0.9s cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s forwards;
+  opacity: 1;
+  transform:
+    translateY(var(--hero-card-y, -6px))
+    rotateX(2deg)
+    rotateY(-3deg);
   transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   perspective: 1200px;
 }
+
 .hero-card:hover {
-  transform: translateY(var(--hero-card-hover-y, -12px)) scale(1.015) rotateX(1deg) rotateY(-2deg);
+  transform:
+    translateY(var(--hero-card-hover-y, -12px))
+    scale(1.015)
+    rotateX(1deg)
+    rotateY(-2deg);
 }
 
 @media (prefers-reduced-motion: reduce) {
