@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { useEffect, useRef, useState, Children, cloneElement, isValidElement } from 'react';
 
 interface RevealProps {
   children: React.ReactNode;
@@ -9,6 +9,31 @@ interface RevealProps {
   distance?: number;
 }
 
+function useInView<T extends HTMLElement>(margin = '-40px') {
+  const ref = useRef<T | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // once: true
+        }
+      },
+      { rootMargin: margin }
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [margin]);
+
+  return { ref, isVisible };
+}
+
 export function Reveal({
   children,
   direction = 'up',
@@ -17,29 +42,32 @@ export function Reveal({
   className,
   distance = 40,
 }: RevealProps) {
+  const { ref, isVisible } = useInView<HTMLDivElement>();
+
+  const offset =
+    direction === 'up'
+      ? { x: '0', y: `${distance}px` }
+      : direction === 'down'
+      ? { x: '0', y: `-${distance}px` }
+      : direction === 'left'
+      ? { x: `${distance}px`, y: '0' }
+      : { x: `-${distance}px`, y: '0' };
+
   return (
-    <motion.div
-      className={className}
-      initial={{
-        opacity: 0,
-        ...(direction === 'up' || direction === 'down'
-          ? { y: direction === 'up' ? distance : -distance }
-          : { x: direction === 'left' ? distance : -distance }),
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-        x: 0,
-      }}
-      viewport={{ once: true, margin: '-40px' }}
-      transition={{
-        duration,
-        delay,
-        ease: [0.25, 0.1, 0.25, 1],
-      }}
+    <div
+      ref={ref}
+      className={`reveal${isVisible ? ' is-visible' : ''}${className ? ` ${className}` : ''}`}
+      style={
+        {
+          '--reveal-x': offset.x,
+          '--reveal-y': offset.y,
+          '--reveal-duration': `${duration}s`,
+          '--reveal-delay': `${delay}s`,
+        } as React.CSSProperties
+      }
     >
       {children}
-    </motion.div>
+    </div>
   );
 }
 
@@ -52,50 +80,48 @@ export function StaggerContainer({
   className?: string;
   delay?: number;
 }) {
+  const { ref, isVisible } = useInView<HTMLDivElement>();
+  const staggerStep = 0.08;
+
+  const items = Children.toArray(children);
+
   return (
-    <motion.div
-      className={className}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: '-40px' }}
-      variants={{
-        hidden: {},
-        visible: {
-          transition: {
-            staggerChildren: 0.08,
-            delayChildren: delay,
-          },
-        },
-      }}
-    >
-      {children}
-    </motion.div>
+    <div ref={ref} className={className}>
+      {items.map((child, index) => {
+        if (!isValidElement(child)) return child;
+        const itemDelay = delay + index * staggerStep;
+        return cloneElement(child as React.ReactElement<{ __isVisible?: boolean; __delay?: number }>, {
+          __isVisible: isVisible,
+          __delay: itemDelay,
+        });
+      })}
+    </div>
   );
 }
 
 export function StaggerItem({
   children,
   className,
+  __isVisible,
+  __delay = 0,
 }: {
   children: React.ReactNode;
   className?: string;
+  __isVisible?: boolean;
+  __delay?: number;
 }) {
   return (
-    <motion.div
-      className={className}
-      variants={{
-        hidden: { opacity: 0, y: 24 },
-        visible: {
-          opacity: 1,
-          y: 0,
-          transition: {
-            duration: 0.5,
-            ease: [0.25, 0.1, 0.25, 1],
-          },
-        },
-      }}
+    <div
+      className={`reveal${__isVisible ? ' is-visible' : ''}${className ? ` ${className}` : ''}`}
+      style={
+        {
+          '--reveal-y': '24px',
+          '--reveal-duration': '0.5s',
+          '--reveal-delay': `${__delay}s`,
+        } as React.CSSProperties
+      }
     >
       {children}
-    </motion.div>
+    </div>
   );
 }
