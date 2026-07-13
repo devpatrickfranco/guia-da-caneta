@@ -242,7 +242,16 @@ export function HeroSection() {
               </h1>
 
               <div className="my-2 block lg:hidden">
-                <ProductMockup />
+                <img
+                  src="/livro.webp"
+                  alt="Sistema Primeiras Semanas"
+                  width={768}
+                  height={1024}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                  className="mx-auto h-auto w-[300px] rounded-2xl"
+                />
               </div>
 
               <p className="max-w-xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
