@@ -23,8 +23,7 @@ export function FinalCtaSection() {
           </h2>
 
           <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed mb-8">
-            Você não precisa estudar Ozempic. Você precisa saber o que fazer
-            amanhã de manhã — e o que observar nas próximas semanas.
+            Você não precisa aprender sobre Ozempic. Você precisa saber exatamente o que fazer amanhã — e o que observar nas próximas semanas.
           </p>
 
           <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-10">
