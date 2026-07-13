@@ -14,7 +14,7 @@ export function RecebeSection() {
       <Container>
         <SectionTitle
           tag="tudo incluso"
-          title="O sistema que você consulta quando a dúvida aparece"
+          title="O que você recebe dentro do sistema"
           description="Material completo, organizado por fase, com módulos práticos e ferramentas rápidas para os primeiros dias."
         />
 
@@ -33,9 +33,7 @@ export function RecebeSection() {
                     SISTEMA PRIMEIRAS SEMANAS™
                   </h3>
                   <p className="text-muted-foreground mt-2 leading-relaxed">
-                    O acompanhamento completo para quem está começando a caneta
-                    de emagrecimento. Inclui módulos por fase, rotina alimentar,
-                    lista de compras, receitas e painel de consulta rápida.
+                    O acompanhamento completo para quem está começando a caneta de emagrecimento. Inclui módulos por fase, rotina alimentar, lista de compras, receitas e painel de consulta rápida.
                   </p>
                 </div>
               </div>
