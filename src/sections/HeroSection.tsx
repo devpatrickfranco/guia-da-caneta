@@ -2,7 +2,6 @@ import { Container } from '../components/ui/Container';
 import { Button } from '../components/ui/Button';
 import { Badge } from '../components/ui/Badge';
 import { Reveal } from '../components/ui/Reveal';
-import { motion } from 'framer-motion';
 import { SITE_CONFIG, HERO_BENEFITS } from '../constants';
 import { StickyCtaMobile } from '../components/landing/StickyCtaMobile';
 
@@ -46,28 +45,14 @@ function ProductMockup({ desktop = false }: { desktop?: boolean }) {
         </div>
       </div>
 
-      <motion.div
-        className="relative z-10"
-        initial={{ opacity: 0, y: 30, rotateX: 5, rotateY: -3 }}
-        animate={{
-          opacity: 1,
-          y: desktop ? -80 : -6,
-          rotateX: 2,
-          rotateY: -3,
-        }}
-        transition={{
-          duration: 0.9,
-          ease: [0.25, 0.1, 0.25, 1],
-          delay: 0.4,
-        }}
-        whileHover={{
-          y: desktop ? -88 : -12,
-          scale: 1.015,
-          rotateX: 1,
-          rotateY: -2,
-          transition: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] },
-        }}
-        style={{ perspective: '1200px' }}
+      <div
+        className="hero-card relative z-10"
+        style={
+          {
+            '--hero-card-y': desktop ? '-80px' : '-6px',
+            '--hero-card-hover-y': desktop ? '-88px' : '-12px',
+          } as React.CSSProperties
+        }
       >
         <div
           className="relative w-[300px] sm:w-[360px] rounded-3xl overflow-hidden"
@@ -131,7 +116,7 @@ function ProductMockup({ desktop = false }: { desktop?: boolean }) {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       <svg
         className="absolute -bottom-4 right-0 w-24 h-24 opacity-[0.04] pointer-events-none"
