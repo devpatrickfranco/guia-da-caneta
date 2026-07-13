@@ -101,6 +101,7 @@ function ProductMockup({ desktop = false }: { desktop?: boolean }) {
                   height={1024}
                   loading="eager"
                   fetchPriority="high"
+                  decoding="async"
                   className="h-full w-full object-cover"
                 />
 
