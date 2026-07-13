@@ -3,8 +3,8 @@ export const SITE_CONFIG = {
   description:
     'O acompanhamento prático para quem começou ou está prestes a começar a caneta de emagrecimento — Ozempic, Mounjaro, Wegovy e similares.',
   url: 'https://guiadacaneta.ellevo.marketing',
-  ctaPrimary: 'Quero meu sistema agora',
-  ctaFinal: 'Quero começar com segurança',
+  ctaPrimary: 'Quero organizar minhas primeiras semanas',
+  ctaFinal: 'Começar organizada agora',
   priceFull: 'R$197',
   priceCurrent: 'R$27,00',
   priceParcelado: '6x de R$ 5,07',
@@ -13,11 +13,11 @@ export const SITE_CONFIG = {
 };
 
 export const HERO_BENEFITS = [
-  'Organizado por fase: dia 1, primeiras semanas e primeiro mês',
-  'O que é normal sentir — e quando falar com o médico',
-  'Rotina alimentar simples para comer mesmo sem fome',
-  'Como proteger músculo, cabelo e energia durante o tratamento',
-  'Painel de consulta rápida para imprimir ou salvar no celular',
+  'Saiba exatamente o que comprar, sem tentativa e erro',
+  'Nunca mais fique em dúvida se um sintoma é normal ou não',
+  'Monte sua rotina da primeira semana em poucos minutos',
+  'Organize alimentação para proteger músculo, cabelo e energia',
+  'Consulte em segundos quando a dúvida aparecer',
 ];
 
 export const IDENTIFICATION_PAINS = [
@@ -203,7 +203,7 @@ export const FAQ = [
   {
     question: 'Serve para quem já começou a caneta?',
     answer:
-      'Sim. O Sistema Primeiras Semanas™ foi feito principalmente para quem começou agora, está nas primeiras doses ou acabou de sair da consulta com a receita e quer saber como se organizar.',
+      'Sim. O Sistema Primeiras Semanas™ foi feito principalmente para quem começou agora, está nas primeiras doses ou acabou de sair da consulta com a receita e quer saber como se organizar. Se você já está em semanas mais avançadas, o material pode servir como referência de consulta rápida.',
   },
   {
     question: 'Serve para Ozempic, Mounjaro, Wegovy e similares?',
@@ -223,7 +223,7 @@ export const FAQ = [
   {
     question: 'Isso substitui consulta médica?',
     answer:
-      'Não. O sistema tem caráter exclusivamente educativo e informativo. Todo tratamento com GLP-1 deve ser acompanhado por um médico prescritor. O material serve para você chegar mais segura e organizada em cada consulta.',
+      'Não. O sistema tem caráter exclusivamente educativo e informativo. Todo tratamento com GLP-1 deve ser acompanhado por um médico prescritor. O material serve para você chegar mais segura nas consultas e saber o que observar entre uma aplicação e outra.',
   },
   {
     question: 'Quanto tempo leva para usar?',
