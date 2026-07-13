@@ -78,7 +78,9 @@ function ProductMockup({ desktop = false }: { desktop?: boolean }) {
             <div
               className="pointer-events-none absolute inset-0 rounded-3xl opacity-[0.03]"
               style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%[...]
+                backgroundImage:
+                  'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.18) 1px, transparent 0)',
+                backgroundSize: '20px 20px',
               }}
               aria-hidden="true"
             />
